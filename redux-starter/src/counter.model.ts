@@ -2,7 +2,6 @@ export interface IState {
   counter: number;
 }
 
-
 export interface IIncrement {
   type: "increment";
   INCREMENT: string;
@@ -20,3 +19,6 @@ export type CounterAction = IIncrement | IDecrement;
 export interface ICounterReducer {
   (state: IState | undefined, action: CounterAction): IState;
 }
+// type version
+// export type ICounterReducer2 = (state: IState | undefined, action: CounterAction) => IState;
+
