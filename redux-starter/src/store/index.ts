@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import {createStore} from "redux";
-import {IInitialState, ICounterReducer} from "../counter.model";
+import { createStore } from "redux";
+import { IInitialState, ICounterReducer } from "../counter.model";
+import { INITIAL_STATE_COUNTER, INCREMENT, DECREMENT } from "../constants";
 
 
-const INITIAL_STATE_COUNTER: IInitialState = { counter: 0 };
 
 const [initialState, setIinitialState] = useState<IInitialState>(INITIAL_STATE_COUNTER);
 useEffect(() => {
