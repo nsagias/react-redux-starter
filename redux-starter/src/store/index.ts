@@ -1,7 +1,12 @@
 // import { useEffect, useState } from "react";
 import { createStore } from "redux";
 import { IState, ICounterReducer, CounterAction } from "../counter.model";
-import { INITIAL_STATE_COUNTER, INCREMENT, DECREMENT } from "../constants";
+import { 
+  INITIAL_STATE_COUNTER, 
+  INCREMENT, 
+  DECREMENT, 
+  INCREASE 
+} from "../constants";
 
 
 // const [initialState, setIinitialState] = useState<IState>(INITIAL_STATE_COUNTER);
@@ -14,12 +19,20 @@ const counterReducer: ICounterReducer = (state: IState = INITIAL_STATE_COUNTER, 
   if (action.type === INCREMENT) {
     return {
       counter: state.counter + 1,
+      action: action.payload
+    }
+  };
+
+  if (action.type === INCREASE) {
+    return {
+      counter: state.counter + action.payload,
     }
   };
   
   if (action.type === DECREMENT) {
     return {
       counter: state.counter -1,
+      action: action.payload
     }
   }
   return state;
