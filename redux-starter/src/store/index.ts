@@ -1,5 +1,6 @@
 // import { useEffect, useState } from "react";
 import { createStore } from "redux";
+import { createSlice } from "@reduxjs/toolkit";
 import { IState, ICounterReducer, CounterAction } from "../counter.model";
 import { 
   INITIAL_STATE_COUNTER, 
@@ -10,11 +11,6 @@ import {
 } from "../constants";
 
 
-// const [initialState, setIinitialState] = useState<IState>(INITIAL_STATE_COUNTER);
-// useEffect(() => {
-//   // call from api 
-//   setIinitialState(initialState);
-// }, []);
 
 const counterReducer: ICounterReducer = (
   state: IState = INITIAL_STATE_COUNTER, action: CounterAction) => {
