@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import classes from "./Counter.module.css";
-import { RootState } from "../store/index";
+import { RootState, AppDispatch } from "../store/index";
 
 const Counter: React.FC = () => {
-  const dispatch = useDispatch();
-  
+  const dispatch = useDispatch<AppDispatch>();
   const counter = useSelector((state:RootState) => state.counter);
 
+ 
   const toggleCounterHandler = () => {}; 
 
   return (
