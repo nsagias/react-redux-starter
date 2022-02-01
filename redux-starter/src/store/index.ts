@@ -5,7 +5,8 @@ import {
   INITIAL_STATE_COUNTER, 
   INCREMENT, 
   DECREMENT, 
-  INCREASE 
+  INCREASE,
+  TOGGLE
 } from "../constants";
 
 
@@ -20,6 +21,7 @@ const counterReducer: ICounterReducer = (
   if (action.type === INCREMENT) {
     return {
       counter: state.counter + 1,
+      showCounter: state.showCounter,
       action: action.payload
     }
   };
@@ -27,14 +29,20 @@ const counterReducer: ICounterReducer = (
   if (action.type === INCREASE) {
     return {
       counter: state.counter + action.payload,
+      showCounter: state.showCounter,
     }
   };
   
   if (action.type === DECREMENT) {
     return {
       counter: state.counter -1,
+      showCounter: state.showCounter,
       action: action.payload
     }
+  }
+
+  if (action.type === TOGGLE) {
+
   }
   return state;
 };
