@@ -2,7 +2,7 @@ import { INCREMENT, INCREASE ,DECREMENT } from "./constants";
 
 export interface IState {
   counter: number;
-  showCounter: true;
+  showCounter: boolean;
 }
 
 export interface ICounterReducer {
