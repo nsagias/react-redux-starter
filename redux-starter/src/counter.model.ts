@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "./constants";
+import { INCREMENT, INCREASE ,DECREMENT } from "./constants";
 
 export interface IState {
   counter: number;
@@ -18,10 +18,15 @@ export interface IIncrement {
   type: typeof INCREMENT;
 }
 
+export interface IIncrease {
+  type: typeof INCREASE;
+}
+
 export interface IDecrement {
   type: typeof DECREMENT;
 }
 
-export type CounterAction = IIncrement | IDecrement;
+
+export type CounterAction = IIncrement | IIncrease| IDecrement;
 
 
