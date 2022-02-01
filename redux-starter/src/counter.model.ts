@@ -3,13 +3,13 @@ export interface IState {
 }
 
 export interface IIncrement {
-  type: "increment";
-  INCREMENT: string;
+  type?: "increment";
+  INCREMENT?: string;
 }
 
 export interface IDecrement {
-  type: 'decrement';
-  DECREMENT: string;
+  type?: "decrement";
+  DECREMENT?: string;
 }
 
 
