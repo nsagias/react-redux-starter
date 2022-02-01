@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../store/index";
-// import { IIncrement } from "../counter.model";
 import classes from "./Counter.module.css";
 import { INCREMENT, INCREASE ,DECREMENT } from "../constants";
 
@@ -15,11 +14,11 @@ const Counter: React.FC = () => {
   };
 
   const increaseHanlder = () => {
-    dispatch({ type: INCREASE, payload: 10})
+    dispatch({ type: INCREASE, payload: 10});
   }
 
   const decrementHandler = () => {
-    dispatch({ type: DECREMENT , payload: 0});
+    dispatch({ type: DECREMENT, payload: 0});
   };
 
   const toggleCounterHandler = () => {}; 
