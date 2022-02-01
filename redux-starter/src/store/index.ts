@@ -13,15 +13,16 @@ useEffect(() => {
 const counterReducer = (state:IState = INITIAL_STATE_COUNTER, action: CounterAction) => {
   if (action.type === INCREMENT) {
     return {
-      counter: state.counter + 1
+      counter: state.counter + 1,
     }
   };
   
   if (action.type === DECREMENT) {
     return {
-      counter: state.counter -1
+      counter: state.counter -1,
     }
   }
+  return state;
 };
 
 const store = createStore();
