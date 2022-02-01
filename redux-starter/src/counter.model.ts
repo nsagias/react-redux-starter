@@ -18,6 +18,5 @@ export type CounterAction = IIncrement | IDecrement;
 
 
 export interface ICounterReducer {
-  state: {counter: number, type: {}};
-  action: CounterAction;
+  (state: IState | undefined, action: CounterAction): IState;
 }

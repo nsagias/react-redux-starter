@@ -10,7 +10,7 @@ useEffect(() => {
   setIinitialState(initialState);
 }, []);
 
-const counterReducer = (state:IState = INITIAL_STATE_COUNTER, action: CounterAction) => {
+const counterReducer: ICounterReducer = (state:IState = INITIAL_STATE_COUNTER, action: CounterAction) => {
   if (action.type === INCREMENT) {
     return {
       counter: state.counter + 1,
@@ -25,4 +25,4 @@ const counterReducer = (state:IState = INITIAL_STATE_COUNTER, action: CounterAct
   return state;
 };
 
-const store = createStore();
+const store = createStore(counterReducer);
