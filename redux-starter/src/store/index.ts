@@ -1,15 +1,7 @@
 import { useEffect, useState } from "react";
 import {createStore} from "redux";
+import {IInitialState, ICounterReducer} from "../counter.model";
 
-
-interface IInitialState {
-  counter: number;
-}
-
-interface ICounterReducer {
-  state: {counter: number};
-  action: {};
-}
 
 const INITIAL_STATE_COUNTER: IInitialState = { counter: 0 };
 
