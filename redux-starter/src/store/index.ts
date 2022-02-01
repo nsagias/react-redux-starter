@@ -16,6 +16,12 @@ const counterReducer = (state:IState = INITIAL_STATE_COUNTER, action: CounterAct
       counter: state.counter + 1
     }
   };
+  
+  if (action.type === DECREMENT) {
+    return {
+      counter: state.counter -1
+    }
+  }
 };
 
 const store = createStore();
