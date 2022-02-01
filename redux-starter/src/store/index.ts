@@ -39,11 +39,15 @@ const counterReducer: ICounterReducer = (
       showCounter: state.showCounter,
       action: action.payload
     }
-  }
+  };
 
   if (action.type === TOGGLE) {
-
-  }
+   return {
+      showCounter: !state.showCounter,
+      counter: state.counter,
+      action: action.payload
+    }
+  };
   return state;
 };
 
