@@ -3,6 +3,6 @@ export interface IInitialState {
 }
 
 export interface ICounterReducer {
-  state: {counter: number};
+  state: {counter: number, type: {}};
   action: {};
 }
