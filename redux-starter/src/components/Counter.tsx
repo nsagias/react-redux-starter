@@ -14,7 +14,9 @@ const Counter: React.FC = () => {
     dispatch( {type: INCREMENT});
   };
 
-  const descrementHandler = () => {};
+  const decrementHandler = () => {
+    dispatch( {type: DECREMENT});
+  };
 
   const toggleCounterHandler = () => {}; 
 
@@ -23,8 +25,8 @@ const Counter: React.FC = () => {
       <h1>Redux Counter</h1>
       <div className={classes.value}>{counter}</div>
       <div>
-        <button>Increment</button>
-        <button>Decrement</button>
+        <button onClick={incrementHandler}>Increment</button>
+        <button onClick={decrementHandler}>Decrement</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
     </main>
