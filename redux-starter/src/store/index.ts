@@ -7,10 +7,22 @@ import {
   INCREMENT, 
   DECREMENT, 
   INCREASE,
-  TOGGLE
+  TOGGLE,
+  COUNTER
 } from "../constants";
 
 
+createSlice({
+  name: COUNTER,
+  initialState: INITIAL_STATE_COUNTER,
+  reducers: {
+    increment(): void {},
+    increase(): void {},
+    decrement(): void {},
+    toggleCounter(): void {}
+  }
+
+});
 
 const counterReducer: ICounterReducer = (
   state: IState = INITIAL_STATE_COUNTER, action: CounterAction) => {
