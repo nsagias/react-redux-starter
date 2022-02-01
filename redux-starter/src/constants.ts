@@ -1,3 +1,4 @@
+import { IInitialState } from "./counter.model";
 
 export const INITIAL_STATE_COUNTER: IInitialState = { counter: 0 };
 
