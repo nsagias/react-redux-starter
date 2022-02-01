@@ -16,14 +16,17 @@ export interface ICounterReducer {
 
 export interface IIncrement {
   type: typeof INCREMENT;
+  payload: number;
 }
 
 export interface IIncrease {
   type: typeof INCREASE;
+  payload: number;
 }
 
 export interface IDecrement {
   type: typeof DECREMENT;
+  payload: number;
 }
 
 
