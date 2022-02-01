@@ -1,12 +1,21 @@
 import { useSelector, useDispatch } from "react-redux";
-import classes from "./Counter.module.css";
 import { RootState, AppDispatch } from "../store/index";
+// import { IIncrement } from "../counter.model";
+import classes from "./Counter.module.css";
+import { INCREMENT, DECREMENT } from "../constants";
+
+
 
 const Counter: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const counter = useSelector((state:RootState) => state.counter);
 
- 
+  const incrementHandler = () => {
+    dispatch( {type: INCREMENT});
+  };
+
+  const descrementHandler = () => {};
+
   const toggleCounterHandler = () => {}; 
 
   return (
