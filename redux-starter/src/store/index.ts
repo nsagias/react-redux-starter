@@ -27,4 +27,7 @@ const counterReducer: ICounterReducer = (state:IState = INITIAL_STATE_COUNTER, a
 
 const store = createStore(counterReducer);
 
+
+
 export default store;
+export type RootState = ReturnType<typeof store.getState>
