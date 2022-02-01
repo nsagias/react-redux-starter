@@ -11,7 +11,7 @@ const Counter: React.FC = () => {
   const counter = useSelector((state:RootState) => state.counter);
 
   const incrementHandler = () => {
-    dispatch({ type: INCREMENT });
+    dispatch({ type: INCREMENT , payload: 0 });
   };
 
   const increaseHanlder = () => {
@@ -19,7 +19,7 @@ const Counter: React.FC = () => {
   }
 
   const decrementHandler = () => {
-    dispatch({ type: DECREMENT });
+    dispatch({ type: DECREMENT , payload: 0});
   };
 
   const toggleCounterHandler = () => {}; 
