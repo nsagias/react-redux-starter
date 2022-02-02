@@ -1,8 +1,11 @@
 import { INCREMENT, INCREASE ,DECREMENT } from "./constants";
 
+// export interface IState {
+//   counter: number;
+//   showCounter: boolean;
+// }
 export interface IState {
   counter: number;
-  showCounter: boolean;
 }
 
 export interface ICounterReducer {
@@ -10,9 +13,6 @@ export interface ICounterReducer {
 }
 // type version
 // export type ICounterReducer2 = (state: IState | undefined, action: CounterAction) => IState;
-
-
-
 
 
 export interface IIncrement {
