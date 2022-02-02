@@ -1,7 +1,8 @@
 // import { useEffect, useState } from "react";
 // import { createStore } from "redux";
 import { createSlice, configureStore, PayloadAction} from "@reduxjs/toolkit";
-// import { IState, ICounterReducer, CounterAction } from "../counter.model";
+import { IAuthentication } from "../authentication.model";
+import { IState, ICounterReducer, CounterAction } from "../counter.model";
 import { 
   INITIAL_STATE_COUNTER, 
   // INCREMENT, 
@@ -14,18 +15,19 @@ import {
 } from "../constants";
 
 
+
 const counterSlice = createSlice({
   name: COUNTER,
   initialState: INITIAL_STATE_COUNTER,
   reducers: {
-    increment(state): void {
+    increment(state: IState): void {
       state.counter++;
     },
-    increase(state,  action: PayloadAction<number>): void {
+    increase(state: IState,  action: PayloadAction<number>): void {
       state.counter = state.counter + action.payload;
       
     },
-    decrement(state): void {
+    decrement(state: IState): void {
       state.counter--;
     },
     toggleCounter(state): void {
@@ -37,10 +39,17 @@ const counterSlice = createSlice({
 
 
 
-const AuthenticationSlice = createSlice({
+const authenticationSlice = createSlice({
   name: AUTHENTICATION,
   initialState: INITIAL_STATE_AUTHENTICATION,
-  reducers: {}
+  reducers: {
+    login(state: IAuthentication): void {
+      state.isAuthenticated = true;
+    },
+    logout(state: IAuthentication): void {
+      state.isAuthenticated = false;
+    }
+  }
 });
 
 // const counterReducer: ICounterReducer = (
