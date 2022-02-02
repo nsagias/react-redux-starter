@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../store/index";
-import classes from "./Counter.module.css";
 import { INCREMENT, INCREASE, DECREMENT, TOGGLE } from "../constants";
-
+import { counterActions } from "../store/index";
+import classes from "./Counter.module.css";
 
 
 const Counter: React.FC = () => {
@@ -10,17 +10,27 @@ const Counter: React.FC = () => {
   const counter = useSelector((state: RootState) => state.counter);
   const show = useSelector((state: RootState) => state.showCounter);
 
+  // const incrementHandler = () => {
+  //   dispatch({ type: INCREMENT , payload: 0 });
+  // };
   const incrementHandler = () => {
-    dispatch({ type: INCREMENT , payload: 0 });
+    dispatch( counterActions.increment() );
   };
 
+  // const increaseHanlder = () => {
+  //   dispatch({ type: INCREASE, payload: 10});
+  // }
   const increaseHanlder = () => {
-    dispatch({ type: INCREASE, payload: 10});
+    dispatch( counterActions.increase());
   }
 
+  // const decrementHandler = () => {
+  //   dispatch({ type: DECREMENT, payload: 0});
+  // };
   const decrementHandler = () => {
-    dispatch({ type: DECREMENT, payload: 0});
+    dispatch( counterActions.decrement(10) );
   };
+
 
   const toggleCounterHandler = () => {
     // dispatch({ type: DECREMENT, payload: 0});
