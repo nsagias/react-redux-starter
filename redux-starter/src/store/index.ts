@@ -90,10 +90,14 @@ const authenticationSlice = createSlice({
 // const store = createStore(counterReducer);
 // const store = createStore(counterSlice.reducer);
 const store = configureStore({
-  reducer: counterSlice.reducer
+  reducer: { 
+    counter: counterSlice.reducer,
+    authentication: authenticationSlice.reducer
+  }
 });
 
 export const counterActions = counterSlice.actions
+export const authenticationActions = authenticationSlice.actions
 
 
 export default store;
