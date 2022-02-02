@@ -21,14 +21,14 @@ const Counter: React.FC = () => {
   //   dispatch({ type: INCREASE, payload: 10});
   // }
   const increaseHanlder = () => {
-    dispatch( counterActions.increase());
+    dispatch( counterActions.increase(10));
   }
 
   // const decrementHandler = () => {
   //   dispatch({ type: DECREMENT, payload: 0});
   // };
   const decrementHandler = () => {
-    dispatch( counterActions.decrement(10) );
+    dispatch( counterActions.decrement() );
   };
 
 
