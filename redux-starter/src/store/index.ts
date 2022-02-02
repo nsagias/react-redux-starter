@@ -1,13 +1,13 @@
 // import { useEffect, useState } from "react";
-import { createStore } from "redux";
+// import { createStore } from "redux";
 import { createSlice, configureStore, PayloadAction} from "@reduxjs/toolkit";
-import { IState, ICounterReducer, CounterAction } from "../counter.model";
+// import { IState, ICounterReducer, CounterAction } from "../counter.model";
 import { 
   INITIAL_STATE_COUNTER, 
-  INCREMENT, 
-  DECREMENT, 
-  INCREASE,
-  TOGGLE,
+  // INCREMENT, 
+  // DECREMENT, 
+  // INCREASE,
+  // TOGGLE,
   COUNTER
 } from "../constants";
 
