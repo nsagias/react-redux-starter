@@ -8,7 +8,9 @@ import {
   // DECREMENT, 
   // INCREASE,
   // TOGGLE,
-  COUNTER
+  COUNTER,
+  AUTHENTICATION,
+  INITIAL_STATE_AUTHENTICATION
 } from "../constants";
 
 
@@ -31,6 +33,14 @@ const counterSlice = createSlice({
     }
   }
 
+});
+
+
+
+const AuthenticationSlice = createSlice({
+  name: AUTHENTICATION,
+  initialState: INITIAL_STATE_AUTHENTICATION,
+  reducers: {}
 });
 
 // const counterReducer: ICounterReducer = (
