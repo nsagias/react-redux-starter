@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import { createStore } from "redux";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction} from "@reduxjs/toolkit";
 import { IState, ICounterReducer, CounterAction } from "../counter.model";
 import { 
   INITIAL_STATE_COUNTER, 
@@ -16,10 +16,18 @@ createSlice({
   name: COUNTER,
   initialState: INITIAL_STATE_COUNTER,
   reducers: {
-    increment(): void {},
-    increase(): void {},
-    decrement(): void {},
-    toggleCounter(): void {}
+    increment(state): void {
+      state.counter++;
+    },
+    increase(state): void {
+      state.counter--;
+    },
+    decrement(state, action): void {
+      state.counter = state.counter + action.payload;
+    },
+    toggleCounter(state): void {
+      state.showCounter = !state.showCounter;
+    }
   }
 
 });
