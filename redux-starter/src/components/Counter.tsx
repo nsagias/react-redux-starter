@@ -33,8 +33,8 @@ const Counter: React.FC = () => {
 
 
   const toggleCounterHandler = () => {
-    // dispatch({ type: DECREMENT, payload: 0});
-    dispatch({ type: TOGGLE, payload: 0});
+    // dispatch({ type: TOGGLE, payload: 0});
+    dispatch( counterActions.toggleCounter() );
   }; 
 
   return (
