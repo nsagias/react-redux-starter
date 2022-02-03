@@ -5,10 +5,11 @@ import { authenticationActions } from '../store';
 import classes from './Header.module.css';
 
 const Header: React.FC = () => {
-  const isAuth = useSelector((state: RootState) => state.authentication.isAuthenticated)
+  const isAuth = useSelector((state: RootState) => state.authentication.isAuthenticated);
   const dispatch = useDispatch<AppDispatch>();
 
-  const handleLogoutButton = () => {
+  const handleLogoutButton = (event: any) => {
+    // event.preventDefault();
     dispatch( authenticationActions.logout());
   };
 
