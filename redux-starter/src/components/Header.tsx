@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
-      {isAuth && 
+      {isAuth && (
         <nav>
           <ul>
             <li>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             </li>
           </ul>
         </nav>
-      }
+      )}
     </header>
   );
 };
