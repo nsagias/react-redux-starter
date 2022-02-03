@@ -1,21 +1,24 @@
 // import { useEffect, useState } from "react";
 // import { createStore } from "redux";
 import { createSlice, configureStore, PayloadAction} from "@reduxjs/toolkit";
-import { IAuthentication } from "../authentication.model";
-import { IState, ICounterReducer, CounterAction } from "../counter.model";
-import { IShowCounter } from "../showCounter.model";
-import { 
-  COUNTER,
-  INITIAL_STATE_COUNTER, 
+import counterReducer from "./counter";
+import showCounterReducer from "./showCounter";
+import authenticationReducer from "./auth";
+// import { IAuthentication } from "../authentication.model";
+// import { IState, ICounterReducer, CounterAction } from "../counter.model";
+// import { IShowCounter } from "../showCounter.model";
+// import { 
+//   COUNTER,
+//   INITIAL_STATE_COUNTER, 
   // INCREMENT, 
   // DECREMENT, 
   // INCREASE,
   // TOGGLE,
-  SHOWCOUNTER,
-  INITIAL_STATE_SHOW_COUNTER,
-  AUTHENTICATION,
-  INITIAL_STATE_AUTHENTICATION
-} from "../constants";
+//   SHOWCOUNTER,
+//   INITIAL_STATE_SHOW_COUNTER,
+//   AUTHENTICATION,
+//   INITIAL_STATE_AUTHENTICATION
+// } from "../constants";
 
 
 
@@ -36,30 +39,30 @@ import {
 //   }
 // });
 
-const showCounterSlice = createSlice({
-  name: SHOWCOUNTER,
-  initialState: INITIAL_STATE_SHOW_COUNTER,
-  reducers: {
-    toggleCounter(state: IShowCounter): void {
-      state.showCounter = !state.showCounter;
-    }
-  }
-});
+// const showCounterSlice = createSlice({
+//   name: SHOWCOUNTER,
+//   initialState: INITIAL_STATE_SHOW_COUNTER,
+//   reducers: {
+//     toggleCounter(state: IShowCounter): void {
+//       state.showCounter = !state.showCounter;
+//     }
+//   }
+// });
 
 
 
-const authenticationSlice = createSlice({
-  name: AUTHENTICATION,
-  initialState: INITIAL_STATE_AUTHENTICATION,
-  reducers: {
-    login(state: IAuthentication): void {
-      state.isAuthenticated = true;
-    },
-    logout(state: IAuthentication): void {
-      state.isAuthenticated = false;
-    }
-  }
-});
+// const authenticationSlice = createSlice({
+//   name: AUTHENTICATION,
+//   initialState: INITIAL_STATE_AUTHENTICATION,
+//   reducers: {
+//     login(state: IAuthentication): void {
+//       state.isAuthenticated = true;
+//     },
+//     logout(state: IAuthentication): void {
+//       state.isAuthenticated = false;
+//     }
+//   }
+// });
 
 // const counterReducer: ICounterReducer = (
 //   state: IState = INITIAL_STATE_COUNTER, action: CounterAction) => {
@@ -100,9 +103,9 @@ const authenticationSlice = createSlice({
 // const store = createStore(counterSlice.reducer);
 const store = configureStore({
   reducer: {
-    counter: counterSlice.reducer,
-    showCounter: showCounterSlice.reducer,
-    authentication: authenticationSlice.reducer
+    counter: counterReducer,
+    showCounter: showCounterReducer,
+    authentication: authenticationReducer
   }
   
 });

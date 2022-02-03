@@ -12,4 +12,4 @@ const showCounterSlice = createSlice({
   }
 });
 
-export default showCounterSlice;
+export default showCounterSlice.reducer;
