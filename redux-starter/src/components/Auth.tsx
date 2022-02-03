@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../store/index';  
-import { authenticationActions } from '../store';
+import { authenticationActions } from '../store/auth';
 
 import classes from './Auth.module.css';
 

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState, AppDispatch } from '../store';
-import { authenticationActions } from '../store';
+import { RootState, AppDispatch } from '../store/index';
+import { authenticationActions } from '../store/auth';
 
 import classes from './Header.module.css';
 

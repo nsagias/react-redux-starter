@@ -110,9 +110,9 @@ const store = configureStore({
   
 });
 
-export const counterActions = counterSlice.actions;
-export const showCounterActions = showCounterSlice.actions;
-export const authenticationActions = authenticationSlice.actions;
+
+
+
 
 
 export default store;

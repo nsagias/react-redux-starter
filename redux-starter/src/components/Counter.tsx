@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../store/index";
 // import { INCREMENT, INCREASE, DECREMENT, TOGGLE } from "../constants";
-import { counterActions } from "../store/index";
-import { showCounterActions } from "../store/index";
+import { counterActions } from "../store/counter";
+import { showCounterActions } from "../store/showCounter";
 import classes from "./Counter.module.css";
 
 
