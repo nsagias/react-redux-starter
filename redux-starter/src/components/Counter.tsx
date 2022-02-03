@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState, AppDispatch } from "../store/index";
 // import { INCREMENT, INCREASE, DECREMENT, TOGGLE } from "../constants";
 import { counterActions } from "../store/index";
+import { showCounterActions } from "../store/index";
 import classes from "./Counter.module.css";
 
 
@@ -34,7 +35,7 @@ const Counter: React.FC = () => {
 
   const toggleCounterHandler = () => {
     // dispatch({ type: TOGGLE, payload: 0});
-    dispatch( counterActions.toggleCounter() );
+    dispatch( showCounterActions.toggleCounter() );
   }; 
 
   return (
