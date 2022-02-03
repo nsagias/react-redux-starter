@@ -20,21 +20,21 @@ import {
 
 
 
-const counterSlice = createSlice({
-  name: COUNTER,
-  initialState: INITIAL_STATE_COUNTER,
-  reducers: {
-    increment(state: IState): void {
-      state.counter++;
-    },
-    increase(state: IState,  action: PayloadAction<number>): void {
-      state.counter = state.counter + action.payload;
-    },
-    decrement(state: IState): void {
-      state.counter--;
-    },
-  }
-});
+// const counterSlice = createSlice({
+//   name: COUNTER,
+//   initialState: INITIAL_STATE_COUNTER,
+//   reducers: {
+//     increment(state: IState): void {
+//       state.counter++;
+//     },
+//     increase(state: IState,  action: PayloadAction<number>): void {
+//       state.counter = state.counter + action.payload;
+//     },
+//     decrement(state: IState): void {
+//       state.counter--;
+//     },
+//   }
+// });
 
 const showCounterSlice = createSlice({
   name: SHOWCOUNTER,
