@@ -8,8 +8,8 @@ import classes from "./Counter.module.css";
 
 const Counter: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const counter = useSelector((state: RootState) => state.counter);
-  const show = useSelector((state: RootState) => state.showCounter);
+  const counter = useSelector((state: RootState) => state.counter.counter);
+  const show = useSelector((state: RootState) => state.showCounter.showCounter);
 
   // const incrementHandler = () => {
   //   dispatch({ type: INCREMENT , payload: 0 });
@@ -41,7 +41,8 @@ const Counter: React.FC = () => {
   return (
     <main className={classes.counter}>
       <h1>Redux Counter</h1>
-      {show && <div className={classes.value}>{counter}</div>}
+      {show && <div className={classes.value}>{counter}</div> }
+      
       <div>
         <button onClick={incrementHandler}>Increment</button>
         <button onClick={increaseHanlder}>Increase by 10</button>

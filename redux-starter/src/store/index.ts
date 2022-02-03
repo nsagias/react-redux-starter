@@ -99,11 +99,12 @@ const authenticationSlice = createSlice({
 // const store = createStore(counterReducer);
 // const store = createStore(counterSlice.reducer);
 const store = configureStore({
-  reducer: { 
+  reducer: {
     counter: counterSlice.reducer,
     showCounter: showCounterSlice.reducer,
     authentication: authenticationSlice.reducer
   }
+  
 });
 
 export const counterActions = counterSlice.actions;

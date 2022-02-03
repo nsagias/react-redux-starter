@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { forEachChild } from 'typescript';
 
 import './App.css';
 import Auth from './components/Auth';
@@ -7,11 +8,11 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">     
+    <Fragment>
       <Header />
         <Auth /> 
       <Counter />
-    </div>
+    </Fragment>
   );
 }
 
