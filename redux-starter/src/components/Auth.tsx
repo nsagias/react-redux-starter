@@ -7,7 +7,7 @@ import classes from './Auth.module.css';
 const Auth: React.FC = () => {
 
   const dispatch = useDispatch<AppDispatch>();
-  const handleSubmit = (event: any) => {
+  const handleLoginSubmit = (event: any) => {
     event.preventDefault();
     dispatch( authenticationActions.login());
   };
@@ -15,7 +15,7 @@ const Auth: React.FC = () => {
   return (
     <main className={classes.auth}>
       <section>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLoginSubmit}>
           <div className={classes.control}>
             <label htmlFor='email'>Email</label>
             <input type='email' id='email' />
