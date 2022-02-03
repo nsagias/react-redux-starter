@@ -1,10 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../store';
+import { authenticationActions } from '../store';
 
 import classes from './Header.module.css';
 
 const Header: React.FC = () => {
   const isAuth = useSelector((state: RootState) => state.authentication.isAuthenticated)
+  const dispatch = useDispatch<AppDispatch>();
+
+  const handleLogoutButton = () => {
+    dispatch( authenticationActions.logout());
+  };
+
 
   return (
     <header className={classes.header}>
@@ -19,7 +26,7 @@ const Header: React.FC = () => {
               <a href='/'>My Sales</a>
             </li>
             <li>
-              <button>Logout</button>
+              <button onClick={handleLogoutButton}>Logout</button>
             </li>
           </ul>
         </nav>
