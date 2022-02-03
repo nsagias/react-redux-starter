@@ -1,6 +1,11 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState, AppDispatch } from '../store';
+
 import classes from './Header.module.css';
 
-const Header = () => {
+const Header: React.FC = () => {
+  const isAuth = useSelector((state: RootState) => state.authentication.isAuthenticated)
+
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
