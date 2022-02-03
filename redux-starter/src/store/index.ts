@@ -3,16 +3,20 @@
 import { createSlice, configureStore, PayloadAction} from "@reduxjs/toolkit";
 import { IAuthentication } from "../authentication.model";
 import { IState, ICounterReducer, CounterAction } from "../counter.model";
+import { IShowCounter } from "../showCounter.model";
 import { 
+  COUNTER,
   INITIAL_STATE_COUNTER, 
   // INCREMENT, 
   // DECREMENT, 
   // INCREASE,
   // TOGGLE,
-  COUNTER,
+  SHOWCOUNTER,
+  INITIAL_STATE_SHOW_COUNTER,
   AUTHENTICATION,
   INITIAL_STATE_AUTHENTICATION
 } from "../constants";
+
 
 
 
@@ -25,16 +29,21 @@ const counterSlice = createSlice({
     },
     increase(state: IState,  action: PayloadAction<number>): void {
       state.counter = state.counter + action.payload;
-      
     },
     decrement(state: IState): void {
       state.counter--;
     },
-    toggleCounter(state): void {
+  }
+});
+
+const showCounterSlice = createSlice({
+  name: SHOWCOUNTER,
+  initialState: INITIAL_STATE_SHOW_COUNTER,
+  reducers: {
+    toggleCounter(state: IShowCounter): void {
       state.showCounter = !state.showCounter;
     }
   }
-
 });
 
 
@@ -92,12 +101,14 @@ const authenticationSlice = createSlice({
 const store = configureStore({
   reducer: { 
     counter: counterSlice.reducer,
+    showcounter: showCounterSlice.reducer,
     authentication: authenticationSlice.reducer
   }
 });
 
-export const counterActions = counterSlice.actions
-export const authenticationActions = authenticationSlice.actions
+export const counterActions = counterSlice.actions;
+export const showCounterACtions = showCounterSlice.actions;
+export const authenticationActions = authenticationSlice.actions;
 
 
 export default store;
