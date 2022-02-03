@@ -10,12 +10,13 @@ import UserProfile from './components/UserProfile';
 
 function App() {
   const dispatch = useDispatch<AppDispatch>();
-  useSelector((state: RootState) => state.)
+  const isAuth = useSelector((state: RootState) => state.authentication.isAuthenticated);
 
   return (
     <Fragment>
       <Header />
-        <Auth /> 
+       {!isAuth && <Auth /> }
+       {isAuth && <UserProfile />}
       <Counter />
     </Fragment>
   );
