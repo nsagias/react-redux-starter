@@ -7,7 +7,7 @@ export const INITIAL_STATE_SHOW_COUNTER: IShowCounter = { showCounter: true};
 export const INITIAL_STATE_AUTHENTICATION: IAuthentication = { isAuthenticated: false};
 
 export const COUNTER: string = "COUNTER";
-export const SHOW_COUNTER: string = "SHOW_COUNTER";
+export const SHOWCOUNTER: string = "SHOWCOUNTER";
 export const AUTHENTICATION: string = "AUTHENTICATION";
 export const INCREMENT: string = "INCREMENT";
 export const INCREASE: string = "INCREASE";
